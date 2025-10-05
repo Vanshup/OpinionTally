@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="col-12 col-lg-8 mx-auto">
+      <h2 class="mb-3">Twitter Sentiment Analysis — Vaccination Opinions</h2>
+
+      <div class="card shadow-sm p-3 mb-4">
+        <label for="tweetInput" class="form-label fw-semibold">Enter tweets / opinions (one per line)</label>
+        <textarea id="tweetInput" class="form-control mb-3" rows="6"
+          placeholder="Paste tweets here (one opinion/tweet per line)..."></textarea>
+
+        <div class="d-flex gap-2">
+          <button id="analyzeBtn" class="btn btn-success flex-grow-1">Analyze</button>
+          <button id="clearBtn" class="btn btn-outline-secondary">Clear</button>
+        </div>
+        <small class="text-muted mt-2 d-block">Results shown below. Refresh saves the last result into History.</small>
+      </div>
+
+      <!-- Results -->
+      <div id="resultSection" class="mb-5" style="display: none;">
+        <h4 class="mb-2">Analysis Result</h4>
+        <p id="summaryText" class="fw-semibold fs-6"></p>
+
+        <div class="card p-3 shadow-sm chart-container mb-3">
+          <canvas id="sentimentChart" style="width:100%; height:100%;"></canvas>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <h5>Top Positive Tweets</h5>
+            <ul id="positiveList" class="list-group"></ul>
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+            <h5>Top Negative Tweets</h5>
+            <ul id="negativeList" class="list-group"></ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
