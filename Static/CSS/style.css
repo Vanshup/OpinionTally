@@ -1,0 +1,60 @@
+/* Basic app-wide styles */
+body {
+  background-color: #f7f9fb;
+  color: #222;
+}
+
+/* Card styling */
+.card {
+  border-radius: 12px;
+}
+
+/* Chart sizing */
+.chart-container {
+  max-width: 520px;
+  height: 260px; /* Chart canvas will fill this (maintainAspectRatio=false) */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small chart used on history (thumbnail) */
+.chart-sm {
+  max-width: 360px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure long tweets wrap nicely */
+.list-group-item {
+  word-break: break-word;
+}
+
+/* Buttons styling improvements */
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chart-container {
+    max-width: 100%;
+    height: 220px;
+  }
+  .chart-sm {
+    max-width: 100%;
+    height: 160px;
+  }
+}
+
+/* Custom navbar background */
+.custom-navbar {
+    background-color: #4e54c8 !important;   /* Indigo */
+    background-image: linear-gradient(45deg, #002C6F, #000000); /* Gradient */
+}
+
+/* Optional: change nav-link hover effect */
+.custom-navbar .nav-link:hover {
+    color: #6996ff !important;  /* Gold/yellow hover color */
+}
