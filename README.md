@@ -18,7 +18,7 @@ Flask web app that performs sentiment analysis on vaccination-related tweets/opi
 
 1.  **Clone or Copy the Project Folder:**
     ```bash
-    cd twitter-vax-sentiment
+    cd OpinionTally
     ```
 
 2.  **Create and Activate Python Virtual Environment:**
@@ -40,6 +40,7 @@ Flask web app that performs sentiment analysis on vaccination-related tweets/opi
 3.  **Install Requirements:**
     ```bash
     pip install -r requirements.txt
+    pip install transformers torch numpy
     ```
     *(The application will automatically download the necessary NLTK VADER data on its first run.)*
 
